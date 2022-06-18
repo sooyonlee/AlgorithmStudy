@@ -1,3 +1,5 @@
+# BOJ 7576번
+# 시작점이 여러 개인 bfs
 from collections import deque
 
 m,n = map(int, input().split())
@@ -9,6 +11,7 @@ queue = deque()
 for i in range(n):
     for j in range(m):
         if graph[i][j] == 1:
+            # 여기서 bfs를 돌리면 시작점이 하나인 문제가 되는 거임!
             queue.append((i,j))  
             
 dx = [-1,1,0,0]
